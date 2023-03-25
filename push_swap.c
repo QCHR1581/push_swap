@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:44:57 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/25 15:52:53 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/25 16:14:03 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ int	main(int argc, char **argv)
 		free(split[i++]);
 	free(split);
 	// s(&stack_a, 'a');
+	r(&stack_a, 'a');
+	r(&stack_a, 'a');
+	// r(&stack_a, 'a');
+	// r(&stack_a, 'a');
 	// pb(&stack_a, &stack_b);
 	// pb(&stack_a, &stack_b);
 	// pb(&stack_a, &stack_b);
@@ -50,8 +54,8 @@ int	main(int argc, char **argv)
 		ft_printf("stack_a(n): %d\n", curr_a->num);
 		curr_a = curr_a->next;
 	}
-	ft_printf("Max: %d\n", get_max(&stack_a));
-	ft_printf("Size: %d\n", get_size(&stack_a));
+	// ft_printf("Max: %d\n", get_max(&stack_a));
+	// ft_printf("Size: %d\n", get_size(&stack_a));
 	ft_printf("\n");
 	while (curr_b)
 	{
