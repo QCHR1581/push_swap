@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:58:56 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/21 17:59:37 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/25 13:41:37 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,19 +71,11 @@ void	read_arguments(char **split, t_list **node)
 		if (value <= 0)
 		{
 			if (check_argument(split[i]) == 1)
-			{
-				ft_putstr_fd("Error\n", 2);
-				deallocate(node);
-				exit (1);
-			}
+				error(split, node);
 		}
 		i++;
 		insert_end(node, value);
 	}
 	if (check_dups(node) == 1)
-	{
-		ft_putstr_fd("Error\n", 2);
-		deallocate(node);
-		exit (1);
-	}
+		error(split, node);
 }

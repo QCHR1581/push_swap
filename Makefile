@@ -3,7 +3,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 
 SRC = push_swap.c list_functions.c read_check_functions.c swap_functions.c\
-	push_functions.c rotate_functions.c split_arguments.c
+	push_functions.c rotate_functions.c split_arguments.c error_functions.c\
+	sorting_functions.c
 
 OBJS = $(SRC:.c=.o)
 
