@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:44:57 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/27 14:56:09 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/27 17:37:33 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	main(int argc, char **argv)
 	sorted_array = sort_array(split);
 	i = index_linked_list(&stack_a, sorted_array);
 	i = max_index_bits(i);
+	sort(&stack_a, &stack_b, i);
+	// pb(&stack_a, &stack_b);
 	curr_a = stack_a;
 	curr_b = stack_b;
 	while (curr_a)

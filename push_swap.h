@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 13:06:52 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/27 14:55:57 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/27 16:40:00 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ char	**sort_array(char **array);
 int		get_size(t_list **stack);
 int		index_linked_list(t_list **stack, char **array);
 int		max_index_bits(int num);
-void	check_bits(t_list **stack_a, t_list **stack_b, int num, int count);
+int		check_bits(t_list **stack_a, t_list **stack_b, int num, int count);
+void	sort(t_list **stack_a, t_list **stack_b, int bits);
 void	free_array(char **array);
 void	s(t_list **node, char c);
 void	ss(t_list **stack_a, t_list **stack_b);
@@ -38,7 +39,6 @@ void	r(t_list **stack, char c);
 void	rr(t_list **stack_a, t_list **stack_b);
 void	rv(t_list **stack, char c);
 void	rrv(t_list **stack_a, t_list **stack_b);
-void	sort(t_list **stack_a, t_list **stack_b);
 void	error(char **split, t_list **node);
 void	deallocate_stacks(t_list **stack_a, t_list **stack_b);
 void	insert_end(t_list **node, int value);
