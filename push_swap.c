@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	t_list	*stack_a;
 	t_list	*stack_b;
 	t_list	*curr_a;
-	t_list	*curr_b;
+	// t_list	*curr_b;
 	char		*str;
 	char		**split;
 	char		**sorted_array;
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 	sort(&stack_a, &stack_b, i);
 	// pb(&stack_a, &stack_b);
 	curr_a = stack_a;
-	curr_b = stack_b;
+	// curr_b = stack_b;
 	while (curr_a)
 	{
 		ft_printf("stack_a(n): %d\n", curr_a->num);

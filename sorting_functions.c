@@ -17,19 +17,19 @@ void	sort(t_list **stack_a, t_list **stack_b, int bits)
 	t_list	*curr;
 	int		count;
 	int		reps;
-	int		control;
+	// int		control;
 
 	count = 0;
 	reps = 0;
 	curr = *stack_a;
 	while (bits > 0)
 	{
-		while (*stack_a)
+		while ((*stack_a)->next)
 		{
-			control = reps;
+			// control = reps;
 			reps += check_bits(stack_a, stack_b, (*stack_a)->num, count);
-			if (*stack_a && control == reps)
-				*stack_a = (*stack_a)->next;
+			// if (*stack_a && control == reps)
+				// *stack_a = (*stack_a)->next;
 		}
 		*stack_a = curr;
 		bits--;
