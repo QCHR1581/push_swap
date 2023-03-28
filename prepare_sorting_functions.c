@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:27:12 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/28 11:41:19 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:37:46 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	index_linked_list(t_list **stack, char **array)
 
 	curr = *stack;
 	i = 0;
+	y = 0;
 	while (curr)
 	{
 		while (array[i])

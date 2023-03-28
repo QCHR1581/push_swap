@@ -10,7 +10,7 @@ OBJS = $(SRC:.c=.o)
 
 LIBFT = ./libft/libft.a 
 
-.PHONY:
+.phony:
 	clean fclean re all
 
 all: $(NAME)

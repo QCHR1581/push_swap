@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:25:38 by chasling          #+#    #+#             */
-/*   Updated: 2023/01/31 10:15:15 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:09:00 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_word_counter(char const *s, char c)
 	i = 0;
 	word_counter = 0;
 	s_len = ft_strlen(s) - 1;
-	while (s[s_len] == c)
+	while (s_len >= 0 && s[s_len] == c)
 		s_len--;
 	while (s[i] == c)
 		i++;

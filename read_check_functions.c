@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:58:56 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/27 11:57:45 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:15:25 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	check_argument(char *arg)
 		}
 		if (!((arg[i] >= '0' && arg[i] <= '9')))
 			return (1);
+		ft_printf("Char: %c\n", arg[i]);
 		value = value * 10 + (arg[i] - '0');
 		if (value * minus > 2147483647 || value * minus < -2147483648)
 			return (1);

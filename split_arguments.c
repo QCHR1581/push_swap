@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:08:56 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/21 18:00:28 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:07:43 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	**split_arguments(char *str)
 	char	**split;
 
 	split = ft_split(str, ' ');
-	if (!*split)
+	if (!split)
 	{
 		free(str);
 		exit (1);

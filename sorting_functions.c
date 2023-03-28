@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:12:33 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/28 11:41:44 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:04:41 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,8 @@ void	sort(t_list **stack_a, t_list **stack_b, int bits)
 		}
 	}
 }
+
+// void	sort_three(t_list **stack_a, t_list **stack_b, int bits)
+// {
+	
+// }
