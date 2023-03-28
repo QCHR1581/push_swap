@@ -14,14 +14,14 @@
 
 void	sort(t_list **stack_a, t_list **stack_b, int bits)
 {
-	t_list	*curr;
+	// t_list	*curr;
 	int		count;
 	int		reps;
 	// int		control;
 
 	count = 0;
 	reps = 0;
-	curr = *stack_a;
+	// curr = *stack_a;
 	while (bits > 0)
 	{
 		while ((*stack_a)->next)
@@ -31,7 +31,7 @@ void	sort(t_list **stack_a, t_list **stack_b, int bits)
 			// if (*stack_a && control == reps)
 				// *stack_a = (*stack_a)->next;
 		}
-		*stack_a = curr;
+		// *stack_a = curr;
 		bits--;
 		count++;
 		while (reps > 0)
