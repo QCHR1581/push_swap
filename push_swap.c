@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	char		*str;
 	char		**sorted_array;
 	int			i;
-	int			size;
+	// int			size;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -35,7 +35,8 @@ int	main(int argc, char **argv)
 	sorted_array = sort_array(split);
 	i = index_linked_list(&stack_a, sorted_array);
 	i = max_index_bits(i);
-	size = get_size(&stack_a);
+	// ft_printf("Max Bits: %d\n", i);
+	// size = get_size(&stack_a);
 	// if (size == 3)
 	// 	sort_three(&stack_a, &stack_b);
 	// else if (size == 4)

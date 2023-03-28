@@ -102,9 +102,10 @@ int	max_index_bits(int num)
 		else
 			num_two <<= 1;
 		count++;
+		cmp = 0;
 		i++;
 	}
-	return (i);
+	return (count);
 }
 
 int	check_bits(t_list **stack_a, t_list **stack_b, int num, int count)
