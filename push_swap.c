@@ -35,7 +35,6 @@ int	main(int argc, char **argv)
 	sorted_array = sort_array(split);
 	i = index_linked_list(&stack_a, sorted_array);
 	i = max_index_bits(i);
-	// ft_printf("Max Bits: %d\n", i);
 	// size = get_size(&stack_a);
 	// if (size == 3)
 	// 	sort_three(&stack_a, &stack_b);
