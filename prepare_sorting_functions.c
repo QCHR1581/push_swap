@@ -6,26 +6,26 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:27:12 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/27 17:21:28 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 11:41:19 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// int	get_size(t_list **stack)
-// {
-// 	t_list *curr;
-// 	int	i;
+int	get_size(t_list **stack)
+{
+	t_list *curr;
+	int	i;
 
-// 	curr = *stack;
-// 	i = 0;
-// 	while (curr)
-// 	{
-// 		curr = curr->next;
-// 		i++;
-// 	}
-// 	return (i);
-// }
+	curr = *stack;
+	i = 0;
+	while (curr)
+	{
+		curr = curr->next;
+		i++;
+	}
+	return (i);
+}
 
 char	**sort_array(char **array)
 {
@@ -39,7 +39,7 @@ char	**sort_array(char **array)
 	{
 		while (array[y + 1])
 		{
-			if (ft_strncmp(array[y], array[y + 1], 1) > 0)
+			if (ft_atoi(array[y]) > ft_atoi(array[y + 1]))
 			{
 				temp = array[y + 1];
 				array[y + 1] = array[y];
@@ -110,12 +110,13 @@ int	check_bits(t_list **stack_a, t_list **stack_b, int num, int count)
 {
 		if (num & (1 << count))
 		{
-			pb(stack_a, stack_b);
-			return (1);
+			if ((*stack_a)->next)
+				r(stack_a, 'a');
+			return (0);
 		}
 		else
 		{
-			r(stack_a, 'a');
-			return (0);
+			pb(stack_a, stack_b);
+			return (1);
 		}
 }
