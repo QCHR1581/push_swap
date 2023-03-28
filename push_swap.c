@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:44:57 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/28 17:56:10 by chasling         ###   ########.fr       */
+/*   Updated: 2023/03/28 18:15:48 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(int argc, char **argv)
 	// t_list	*curr_b;
 	// char		*str;
 	char		**split;
+	char		*str;
 	char		**sorted_array;
 	int			i;
 	int			size;
@@ -28,7 +29,8 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	if (argc == 1)
 		return (1);
-	split = split_arguments(join_arguments(argv, argc));
+	str = join_arguments(argv, argc);
+	split = split_arguments(str);
 	read_arguments(split, &stack_a);
 	sorted_array = sort_array(split);
 	i = index_linked_list(&stack_a, sorted_array);
