@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	char		*str;
 	char		**sorted_array;
 	int			i;
-	// int			size;
+	int			size;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -35,14 +35,17 @@ int	main(int argc, char **argv)
 	sorted_array = sort_array(split);
 	i = index_linked_list(&stack_a, sorted_array);
 	i = max_index_bits(i);
-	// size = get_size(&stack_a);
+	size = get_size(&stack_a);
+	if (size == 2)
+			sort_two(&stack_a);
 	// if (size == 3)
-	// 	sort_three(&stack_a, &stack_b);
+	// 		sort_three(&stack_a);
 	// else if (size == 4)
 	// 	sort_four(&stack_a, &stack_b);
 	// else if (size == 5)
 	// 	sort_five(&stack_a, &stack_b);
-	sort(&stack_a, &stack_b, i);
+	else
+		sort(&stack_a, &stack_b, i);
 	curr_a = stack_a;
 	// curr_b = stack_b;
 	while (curr_a)

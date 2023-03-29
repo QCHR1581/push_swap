@@ -38,7 +38,15 @@ void	sort(t_list **stack_a, t_list **stack_b, int bits)
 	}
 }
 
-// void	sort_three(t_list **stack_a, t_list **stack_b, int bits)
+void	sort_two(t_list **stack_a)
+{
+	if ((*stack_a)->num > (*stack_a)->next->num)	
+		r(stack_a, 'a');
+}
+
+// void	sort_three(t_list **stack_a)
 // {
-	
+	// prepared get_max_num function for if conditions
+	// 5 cases to handle for three elements
+// 	if 
 // }

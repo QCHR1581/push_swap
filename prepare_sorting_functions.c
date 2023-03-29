@@ -27,6 +27,22 @@ int	get_size(t_list **stack)
 	return (i);
 }
 
+int	get_max_num(t_list **stack)
+{
+	t_list *curr;
+	int	max;
+
+	curr = *stack;
+	max = curr->num;
+	while (curr->next)
+	{
+		if (curr->next->num > curr->num)
+			max = curr->next->num;
+		curr = curr->next;
+	}
+	return (max);
+}
+
 char	**sort_array(char **array)
 {
 	char *temp;
