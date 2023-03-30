@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	t_list	*curr_a;
+	// t_list	*curr_a;
 	// t_list	*curr_b;
 	// char		*str;
 	char		**split;
@@ -44,15 +44,15 @@ int	main(int argc, char **argv)
 	// 	sort_five(&stack_a, &stack_b);
 	else
 		sort(&stack_a, &stack_b, max_index_bits(size - 1));
-	curr_a = stack_a;
+	// curr_a = stack_a;
 	// curr_b = stack_b;
-	while (curr_a)
-	{
-		ft_printf("stack_a(n): %d\n", curr_a->num);
-		ft_printf("stack_a(i): %d\n\n", curr_a->i);
-		curr_a = curr_a->next;
-	}
-	ft_printf("\n");
+	// while (curr_a)
+	 
+	// printf("stack_a(n): %d\n", curr_a->num);
+	// 	ft_printf("stack_a(i): %d\n\n", curr_a->i);
+	// 	curr_a = curr_a->next;
+	// }
+	// ft_printf("\n");
 	// while (curr_b)
 	// {
 	// 	ft_printf("stack_b(n): %d\n", curr_b->num);

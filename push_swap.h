@@ -28,7 +28,7 @@ char	**sort_array(char **array);
 int		get_size(t_list **stack);
 void	index_linked_list(t_list **stack, char **array);
 int		max_index_bits(int num);
-// int		get_max_num(t_list **stack);
+int		get_max_num(t_list **stack);
 int		check_bits(t_list **stack_a, t_list **stack_b, int num, int count);
 void	sort(t_list **stack_a, t_list **stack_b, int bits);
 void	sort_two(t_list **stack_a);
