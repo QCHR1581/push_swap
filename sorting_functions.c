@@ -44,9 +44,27 @@ void	sort_two(t_list **stack_a)
 		r(stack_a, 'a');
 }
 
-// void	sort_three(t_list **stack_a)
-// {
-	// prepared get_max_num function for if conditions
-	// 5 cases to handle for three elements
-// 	if 
-// }
+void	sort_three(t_list **stack)
+{
+		if ((*stack)->num == get_max_num(stack)
+		&& (*stack)->next->num < (*stack)->next->next->num)
+		r(stack, 'a');
+	else if ((*stack)->num == get_max_num(stack)
+		&& (*stack)->next->num > (*stack)->next->next->num)
+		{
+			r(stack, 'a');
+			s(stack, 'a');
+		}
+	else if ((*stack)->next->num == get_max_num(stack)
+		&& (*stack)->num < (*stack)->next->next->num)
+		{
+			rv(stack, 'a');
+			s(stack, 'a');
+		}
+	else if ((*stack)->next->num == get_max_num(stack)
+		&& (*stack)->num > (*stack)->next->next->num)
+			rv(stack, 'a');
+	else if ((*stack)->next->next->num == get_max_num(stack)
+		&& (*stack)->num > (*stack)->next->num)
+			s(stack, 'a');
+}

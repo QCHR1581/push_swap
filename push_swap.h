@@ -33,6 +33,7 @@ int		check_bits(t_list **stack_a, t_list **stack_b, int num, int count);
 void	sort(t_list **stack_a, t_list **stack_b, int bits);
 void	sort_two(t_list **stack_a);
 void	sort_three(t_list **stack_a);
+void	sort_four(t_list **stack_a);
 void	free_array(char **array);
 void	s(t_list **node, char c);
 void	ss(t_list **stack_a, t_list **stack_b);

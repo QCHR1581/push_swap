@@ -36,7 +36,7 @@ int	get_max_num(t_list **stack)
 	max = curr->num;
 	while (curr->next)
 	{
-		if (curr->next->num > curr->num)
+		if (curr->next->num > max)
 			max = curr->next->num;
 		curr = curr->next;
 	}

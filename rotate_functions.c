@@ -43,7 +43,7 @@ void	rv(t_list **stack, char c)
 	if (c == 'r')
 		ft_printf("%c", c);
 	else
-		ft_printf("r%c\n", c);
+		ft_printf("rr%c\n", c);
 }
 
 void	rrv(t_list **stack_a, t_list **stack_b)
