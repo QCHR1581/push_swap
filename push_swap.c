@@ -16,13 +16,12 @@ int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	// t_list	*curr_a;
+	t_list	*curr_a;
 	// t_list	*curr_b;
 	// char		*str;
 	char		**split;
 	char		*str;
 	char		**sorted_array;
-	int			i;
 	int			size;
 
 	stack_a = NULL;
@@ -33,10 +32,8 @@ int	main(int argc, char **argv)
 	split = split_arguments(str);
 	read_arguments(split, &stack_a);
 	sorted_array = sort_array(split);
-	i = index_linked_list(&stack_a, sorted_array);
-	i = max_index_bits(i);
+	index_linked_list(&stack_a, sorted_array);
 	size = get_size(&stack_a);
-	ft_printf("Max Num: %d\n", get_max_num(&stack_a));
 	if (size == 2)
 			sort_two(&stack_a);
 	if (size == 3)
@@ -46,16 +43,16 @@ int	main(int argc, char **argv)
 	// else if (size == 5)
 	// 	sort_five(&stack_a, &stack_b);
 	else
-		sort(&stack_a, &stack_b, i);
-	// curr_a = stack_a;
+		sort(&stack_a, &stack_b, max_index_bits(size - 1));
+	curr_a = stack_a;
 	// curr_b = stack_b;
-	// while (curr_a)
-	// {
-	// 	ft_printf("stack_a(n): %d\n", curr_a->num);
-	// 	ft_printf("stack_a(i): %d\n\n", curr_a->i);
-	// 	curr_a = curr_a->next;
-	// }
-	// ft_printf("\n");
+	while (curr_a)
+	{
+		ft_printf("stack_a(n): %d\n", curr_a->num);
+		ft_printf("stack_a(i): %d\n\n", curr_a->i);
+		curr_a = curr_a->next;
+	}
+	ft_printf("\n");
 	// while (curr_b)
 	// {
 	// 	ft_printf("stack_b(n): %d\n", curr_b->num);

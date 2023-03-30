@@ -27,21 +27,21 @@ int	get_size(t_list **stack)
 	return (i);
 }
 
-int	get_max_num(t_list **stack)
-{
-	t_list *curr;
-	int	max;
+// int	get_max_num(t_list **stack)
+// {
+// 	t_list *curr;
+// 	int	max;
 
-	curr = *stack;
-	max = curr->num;
-	while (curr->next)
-	{
-		if (curr->next->num > max)
-			max = curr->next->num;
-		curr = curr->next;
-	}
-	return (max);
-}
+// 	curr = *stack;
+// 	max = curr->num;
+// 	while (curr->next)
+// 	{
+// 		if (curr->next->num > max)
+// 			max = curr->next->num;
+// 		curr = curr->next;
+// 	}
+// 	return (max);
+// }
 
 char	**sort_array(char **array)
 {
@@ -69,15 +69,13 @@ char	**sort_array(char **array)
 	return (array);
 }
 
-int	index_linked_list(t_list **stack, char **array)
+void	index_linked_list(t_list **stack, char **array)
 {
 	t_list *curr;
 	int	i;
-	int	y;
 
 	curr = *stack;
 	i = 0;
-	y = 0;
 	while (curr)
 	{
 		while (array[i])
@@ -86,42 +84,19 @@ int	index_linked_list(t_list **stack, char **array)
 				curr->i = i;
 			i++;
 		}
-		if (i > y)
-			y = i;
 		i = 0;
 		curr = curr->next;
 	}
-	return (y - 1);
 }
 
 int	max_index_bits(int num)
 {
-	int	count;
-	int	num_two;
-	int	cmp;
-	int	i;
+	int	max_bits;
 
-	count = 1;
-	num_two = 0;
-	i = 0;
-	if (num == 1)
-		return (1);
-	while (num_two != num)
-	{
-		cmp = num & (1 << count);
-		if (cmp)
-		{
-			num_two = ~num_two;
-			num_two <<= 1;
-			num_two = ~num_two;
-		}
-		else
-			num_two <<= 1;
-		count++;
-		cmp = 0;
-		i++;
-	}
-	return (count);
+	max_bits = 0;
+	while ((num >> max_bits) != 0)
+		max_bits++;
+	return (max_bits);
 }
 
 int	check_bits(t_list **stack_a, t_list **stack_b, int num, int count)
