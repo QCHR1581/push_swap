@@ -68,3 +68,8 @@ void	sort_three(t_list **stack)
 		&& (*stack)->num > (*stack)->next->num)
 			s(stack, 'a');
 }
+
+// void	sort_four(t_list **stack)
+// {
+
+// }
