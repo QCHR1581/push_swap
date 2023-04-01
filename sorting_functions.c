@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:12:33 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 14:30:29 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/01 15:05:29 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	sort(t_list **stack_a, t_list **stack_b, int bits)
 		i = get_size(stack_a);
 		while (i > 0)
 		{
-			// check_sorted_status(stack_a, stack_b);
+			check_sorted_status(stack_a, stack_b);
 			reps += check_bits(stack_a, stack_b, (*stack_a)->i, count);
 			i--;
 		}
