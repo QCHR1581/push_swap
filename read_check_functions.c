@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:58:56 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/28 17:15:25 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/01 14:53:02 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	check_argument(char *arg)
 		}
 		if (!((arg[i] >= '0' && arg[i] <= '9')))
 			return (1);
-		ft_printf("Char: %c\n", arg[i]);
 		value = value * 10 + (arg[i] - '0');
 		if (value * minus > 2147483647 || value * minus < -2147483648)
 			return (1);
@@ -68,11 +67,8 @@ void	read_arguments(char **split, t_list **node)
 	while (split[i])
 	{
 		value = ft_atoi(split[i]);
-		if (value <= 0)
-		{
-			if (check_argument(split[i]) == 1)
-				error(split, node);
-		}
+		if (check_argument(split[i]) == 1)
+			error(split, node);
 		i++;
 		insert_end(node, value);
 	}

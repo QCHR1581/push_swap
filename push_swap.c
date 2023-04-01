@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:44:57 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/28 18:15:48 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/01 14:33:05 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,23 @@ int	main(int argc, char **argv)
 	read_arguments(split, &stack_a);
 	sorted_array = sort_array(split);
 	index_linked_list(&stack_a, sorted_array);
+	free_array(sorted_array);
 	size = get_size(&stack_a);
 	if (size == 2)
 			sort_two(&stack_a);
-	if (size == 3)
+	else if (size == 3)
 			sort_three(&stack_a);
-	// else if (size == 4)
-	// 	sort_four(&stack_a);
-	// else if (size == 5)
-	// 	sort_five(&stack_a, &stack_b);
+	else if (size == 4)
+		sort_four(&stack_a, &stack_b);
+	else if (size == 5)
+		sort_five(&stack_a, &stack_b);
 	else
 		sort(&stack_a, &stack_b, max_index_bits(size - 1));
 	// curr_a = stack_a;
 	// curr_b = stack_b;
 	// while (curr_a)
-	 
-	// printf("stack_a(n): %d\n", curr_a->num);
+	// { 
+	// 	printf("stack_a(n): %d\n", curr_a->num);
 	// 	ft_printf("stack_a(i): %d\n\n", curr_a->i);
 	// 	curr_a = curr_a->next;
 	// }
@@ -58,6 +59,5 @@ int	main(int argc, char **argv)
 	// 	ft_printf("stack_b(n): %d\n", curr_b->num);
 	// 	curr_b = curr_b->next;
 	// }
-	free_array(sorted_array);
 	deallocate_stacks(&stack_a, &stack_b);
 }
