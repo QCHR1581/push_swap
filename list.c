@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list_functions.c                                   :+:      :+:    :+:   */
+/*   list.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:01:49 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/20 16:43:35 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/01 17:10:13 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ void	deallocate_stacks(t_list **stack_a, t_list **stack_b)
 	if (stack_a)
 		deallocate(stack_a);
 	if (stack_b)
-	deallocate(stack_b);
+		deallocate(stack_b);
 	exit (1);
 }

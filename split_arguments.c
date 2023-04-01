@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:08:56 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/28 18:07:43 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/01 17:57:33 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ char	*join_arguments(char **argv, int argc)
 		str = ft_strjoin(temp, buffer);
 		if (!str)
 		{
-			while (i > 0)
-				free(argv[i--]);
+			free(temp);
 			exit (1);
 		}
 		free(temp);

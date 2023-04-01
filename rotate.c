@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_functions.c                                 :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 11:27:39 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/21 15:50:51 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/01 17:12:11 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	r(t_list **stack, char c)
 {
 	t_list	*loop;
 	t_list	*second;
-	
+
 	loop = *stack;
 	second = (*stack)->next;
 	while (loop->next)
@@ -33,11 +33,11 @@ void	r(t_list **stack, char c)
 void	rv(t_list **stack, char c)
 {
 	t_list	*loop;
-	
+
 	loop = *stack;
 	while (loop->next->next)
 		loop = loop->next;
-	loop->next->next = *stack;	
+	loop->next->next = *stack;
 	*stack = loop->next;
 	loop->next = NULL;
 	if (c == 'r')

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_functions.c                                   :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 11:25:19 by chasling          #+#    #+#             */
-/*   Updated: 2023/03/27 11:32:43 by chasling         ###   ########.fr       */
+/*   Created: 2023/03/25 13:33:41 by chasling          #+#    #+#             */
+/*   Updated: 2023/04/01 17:09:47 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_array(char **array)
+void	error(char **split, t_list **node)
 {
 	int	i;
-	
+
 	i = 0;
-	while (array[i])
-		free(array[i++]);
-	free(array);
+	ft_putstr_fd("Error\n", 2);
+	deallocate(node);
+	while (split[i])
+		free(split[i++]);
+	free(split);
+	exit(1);
 }

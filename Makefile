@@ -2,9 +2,9 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 
-SRC = push_swap.c list_functions.c read_check_functions.c swap_functions.c\
-	push_functions.c rotate_functions.c split_arguments.c error_functions.c\
-	prepare_sorting_functions.c sorting_functions.c free_functions.c
+SRC = push_swap.c list.c read_and_check.c swap.c\
+	push.c rotate.c split_arguments.c error.c\
+	prepare_sorting.c prepare_sorting_helpers.c sort_big.c sort_small.c free.c
 
 OBJS = $(SRC:.c=.o)
 
