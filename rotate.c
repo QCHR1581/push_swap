@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 11:27:39 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 17:12:11 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 09:53:42 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,4 @@ void	rv(t_list **stack, char c)
 		ft_printf("%c", c);
 	else
 		ft_printf("rr%c\n", c);
-}
-
-void	rrv(t_list **stack_a, t_list **stack_b)
-{
-	rv(stack_a, 'r');
-	rv(stack_b, 'r');
-	ft_printf("r\n");
-}
-
-void	rr(t_list **stack_a, t_list **stack_b)
-{
-	r(stack_a, 'r');
-	r(stack_b, 'r');
-	ft_printf("\n");
 }

@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:01:49 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 17:10:13 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 09:51:48 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,30 +31,6 @@ void	insert_end(t_list **node, int value)
 	while (curr->next)
 		curr = curr->next;
 	curr->next = new_node;
-}
-
-void	insert_beginning(t_list **node, int value)
-{
-	t_list	*new_node;
-
-	new_node = malloc(sizeof(t_list));
-	if (!new_node)
-		deallocate(node);
-	new_node->num = value;
-	new_node->next = *node;
-	*node = new_node;
-}
-
-void	insert_after(t_list *node, int value)
-{
-	t_list	*new_node;
-
-	new_node = malloc(sizeof(t_list));
-	if (!new_node)
-		deallocate(&node);
-	new_node->next = node->next;
-	new_node->num = value;
-	node->next = new_node;
 }
 
 void	deallocate(t_list **node)

@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:12:33 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 18:06:08 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 09:41:25 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,21 @@ void	check_sorted_status(t_list **stack_a, t_list **stack_b)
 		curr = curr->next;
 	if (!curr->next)
 		deallocate_stacks(stack_a, stack_b);
+}
+
+int	check_bits(t_list **stack_a, t_list **stack_b, int num, int count)
+{
+	if (num & (1 << count))
+	{
+		if ((*stack_a)->next)
+			r(stack_a, 'a');
+		return (0);
+	}
+	else
+	{
+		pb(stack_a, stack_b);
+		return (1);
+	}
 }
 
 void	sort_big(t_list **stack_a, t_list **stack_b, int bits)

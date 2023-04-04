@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:27:12 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 17:11:29 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 09:41:33 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,19 +51,4 @@ int	max_index_bits(int num)
 	while ((num >> max_bits) != 0)
 		max_bits++;
 	return (max_bits);
-}
-
-int	check_bits(t_list **stack_a, t_list **stack_b, int num, int count)
-{
-	if (num & (1 << count))
-	{
-		if ((*stack_a)->next)
-			r(stack_a, 'a');
-		return (0);
-	}
-	else
-	{
-		pb(stack_a, stack_b);
-		return (1);
-	}
 }

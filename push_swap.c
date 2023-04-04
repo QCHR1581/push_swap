@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:44:57 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/02 12:06:56 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 09:54:04 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	main(int argc, char **argv)
 		sort_small(&stack_a, &stack_b, size);
 	else
 		sort_big(&stack_a, &stack_b, max_index_bits(size - 1));
-	
 	deallocate(&stack_a);
 }
 	// t_list	*curr_a;
