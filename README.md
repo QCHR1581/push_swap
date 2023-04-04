@@ -1,6 +1,8 @@
 # push_swap
 
-The Push Swap project is a very simple and highly straightforward algorithm project where data must be sorted. You have at your disposal a set of integer values, 2 stacks, and a set of instructions to manipulate both stacks. Your goal is to write a program in C called push_swap which calculates and displays on the standard output the smallest program, made of Push Swap language instructions, that sorts the integers received as arguments.
+The Push Swap project is a very simple and highly straightforward algorithm project where data must be sorted. 
+
+You have at your disposal a set of integer values, 2 stacks, and a set of instructions to manipulate both stacks. 
 
 ## Operations
 
