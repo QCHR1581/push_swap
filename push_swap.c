@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:44:57 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/04 09:54:04 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 12:18:08 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@ int	main(int argc, char **argv)
 	char	**sorted_array;
 	int		size;
 
+	check_invalid_spaces(argc, argv);
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc == 1)
 		return (0);
 	split = split_arguments(join_arguments(argv, argc));
-	if (!split[0])
-		error(split, &stack_a);
 	read_arguments(split, &stack_a);
 	sorted_array = sort_array(split);
 	index_linked_list(&stack_a, sorted_array);

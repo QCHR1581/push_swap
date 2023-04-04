@@ -1,16 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_check_functions.c                             :+:      :+:    :+:   */
+/*   read_and_check.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:58:56 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 14:53:02 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 12:17:50 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	check_invalid_spaces(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 1;
+	while (j < argc)
+	{
+		while (argv[j][i] == ' ')
+			i++;
+		if (!argv[j][i])
+		{
+			ft_putstr_fd("Error\n", 2);
+			exit (1);
+		}
+		j++;
+		i = 0;
+	}
+}
 
 int	check_argument(char *arg)
 {

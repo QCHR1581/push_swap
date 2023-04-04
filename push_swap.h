@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 13:06:52 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 17:33:40 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 12:16:27 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		get_size(t_list **stack);
 void	index_linked_list(t_list **stack, char **array);
 int		max_index_bits(int num);
 int		get_max_num(t_list **stack);
+void	check_invalid_spaces(int argc, char **argv);
 int		check_bits(t_list **stack_a, t_list **stack_b, int num, int count);
 void	check_sorted_status(t_list **stack_a, t_list **stack_b);
 void	sort_big(t_list **stack_a, t_list **stack_b, int bits);
@@ -39,17 +40,12 @@ void	sort_four(t_list **stack_a, t_list **stack_b);
 void	sort_five(t_list **stack_a, t_list **stack_b);
 void	free_array(char **array);
 void	s(t_list **node, char c);
-void	ss(t_list **stack_a, t_list **stack_b);
 void	pa(t_list **stack_a, t_list **stack_b);
 void	pb(t_list **stack_a, t_list **stack_b);
 void	r(t_list **stack, char c);
-void	rr(t_list **stack_a, t_list **stack_b);
 void	rv(t_list **stack, char c);
-void	rrv(t_list **stack_a, t_list **stack_b);
 void	error(char **split, t_list **node);
 void	deallocate_stacks(t_list **stack_a, t_list **stack_b);
 void	insert_end(t_list **node, int value);
-void	insert_beginning(t_list **node, int value);
-void	insert_after(t_list *node, int value);
 void	deallocate(t_list **node);
 #endif
