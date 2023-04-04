@@ -6,7 +6,7 @@
 /*   By: chasling <chasling@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:12:33 by chasling          #+#    #+#             */
-/*   Updated: 2023/04/01 17:09:20 by chasling         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:14:06 by chasling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	sort_three(t_list **stack)
 
 void	sort_four(t_list **stack_a, t_list **stack_b)
 {
-	check_sorted_status(stack_a, stack_b);
 	while ((*stack_a)->i != 0)
 		r(stack_a, 'a');
 	pb(stack_a, stack_b);
@@ -55,7 +54,6 @@ void	sort_four(t_list **stack_a, t_list **stack_b)
 
 void	sort_five(t_list **stack_a, t_list **stack_b)
 {
-	check_sorted_status(stack_a, stack_b);
 	while ((*stack_a)->i != 0)
 		r(stack_a, 'a');
 	pb(stack_a, stack_b);
